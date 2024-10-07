@@ -1,0 +1,53 @@
+.top-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #213547;
+  transition: height 0.3s ease;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  opacity: 0.9;
+  backdrop-filter: saturate(180%) blur(20px);
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.home-title {
+  margin-top: 100px;
+}
+
+.products {
+  color: white;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: auto auto auto auto auto;
+  justify-content: space-evenly;
+  padding: 10px;
+
+  background-color: rgb(238 240 242 / 80%);
+}
+.card-image,
+.card-body {
+  height: 200px;
+  width: 200px;
+  border-radius: 20px;
+}
+
+button {
+  border-radius: 10px;
+  background-color: rgb(205, 198, 198);
+}
+
+.cart {
+  margin-left: 20px;
+}
+
+.cart-item {
+  margin-right: 20px;
+  color: white;
+}

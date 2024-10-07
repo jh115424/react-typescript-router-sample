@@ -1,30 +1,32 @@
-import HomePage from './Pages/HomePage';
-import ProfilesPage from './Pages/ProfilesPage';
-import ProfilePage from './Pages/ProfilePage';
-import NotFoundPage from './Pages/NotFoundPage';
-
+// import HomePage from './Pages/ShoppingCart';
+import ProductCatalog from './Pages/ProductCatalog';
+import ShoppingCart from './Pages/ShoppingCart';
+import Checkout from './Pages/Checkout';
 import  ReactDOM  from 'react-dom/client'
 import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import './index.css'
 
+
+
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: <HomePage />,
-    errorElement: <NotFoundPage />
+    path: "/",
+    element: <ProductCatalog />
   },
   {
-    path: '/profiles',
-    element: <ProfilesPage />,
-    children: [
-      {
-        path: '/profiles/:profileId',
-        element: <ProfilePage />,
-      },
-    ]
+    path: "/product-catalog",
+    element: <ProductCatalog />
   },
+  {
+    path: "/shopping-cart",
+    element: <ShoppingCart />
+  },
+  {
+    path: "/checkout",
+    element: <Checkout />
+  }
 ]);
 
 

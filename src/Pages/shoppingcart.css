@@ -1,0 +1,9 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: space-evenly;
+    padding: 10px;
+  
+    background-color: rgb(238 240 242 / 80%);
+  }

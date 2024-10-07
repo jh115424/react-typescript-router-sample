@@ -28,8 +28,6 @@ const ProductCatalog = () => {
       });
   }, [currentPage, pageSize]);
 
-
-
   const addToCart = () => {
     setCartItems((prevItems) => prevItems + 1);
   };
@@ -40,8 +38,6 @@ const ProductCatalog = () => {
   const handlePageChange = (page: React.SetStateAction<number>) => {
     setCurrentPage(page);
   };
-
-
 
   return (
     <div>
@@ -58,23 +54,21 @@ const ProductCatalog = () => {
           </Link>
           {cartItems && <span className="cart-count">{cartItems}</span>}
         </div>
-
       </div>
 
       <p className="home-title">
-          Welcome to Elaine's Online Outlet, where great products equals great
-          value for food and more!
-        </p>
+        Welcome to Elaine's Online Outlet, where great products equals great
+        value for food and more!
+      </p>
       <ul>
         {products.map((product: any) => (
           <div key={product.id} className="card">
-              <button onClick={addToCart}>Add to Cart</button>
-              <button onClick={subtractToCart}>Remove from Cart</button>
+            <button onClick={addToCart}>Add to Cart</button>
+            <button onClick={subtractToCart}>Remove from Cart</button>
             <img
               src={product.image}
               className="card-image"
               alt={product.name}
-           
             />
             <div className="card-body">
               <h2 className="card-title">{product.name}</h2>
@@ -88,4 +82,5 @@ const ProductCatalog = () => {
       </ul>
     </div>
   );
-};export default ProductCatalog;
+};
+export default ProductCatalog;
